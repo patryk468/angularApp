@@ -1,0 +1,8 @@
+<div *ngIf="country">
+  <h2 class="mt-4">Edycja kraju</h2>
+  <p>Nazwa: <input [(ngModel)]="country.name" name="name" required></p>
+  <p>Stolica: <input [(ngModel)]="country.capital" name="capital" required></p>
+  <p>Populacja: <input [(ngModel)]="country.population" name="population" required></p>
+  <button *ngIf="isEditing" (click)="saveCountry.emit(country)" class="btn btn-primary">Zapisz</button>
+  <button *ngIf="isEditing" (click)="cancelEdit.emit()" class="ms-3 btn btn-primary">Anuluj</button>
+</div>
